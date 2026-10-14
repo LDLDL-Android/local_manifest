@@ -1,23 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
     <!--Remotes-->
-    <remote name="los-23.2"     fetch="https://github.com/LineageOS"      revision="lineage-23.2" />
-    <remote name="muppets-23.2" fetch="https://github.com/TheMuppets"     revision="lineage-23.2" />
-    <remote name="codeberg"     fetch="https://codeberg.org/TheMysticle/" revision="lineage-23.1"/>
+    <remote name="codeberg" fetch="https://codeberg.org/TheMysticle/" revision="lineage-23.1"/>
 
     <!--Device Trees-->
     <project name="android_device_xiaomi_fuxi"          path="device/xiaomi/fuxi"          remote="ldldl" />
     <project name="android_device_xiaomi_sm8550-common" path="device/xiaomi/sm8550-common" remote="ldldl" />
-    <project name="android_hardware_xiaomi"             path="hardware/xiaomi"             remote="los-23.2" />
+    <project name="android_hardware_xiaomi"             path="hardware/xiaomi"             remote="los" revision="lineage-24.0"/>
 
     <!--Vendor Trees-->
-    <!-- <project name="proprietary_vendor_xiaomi_fuxi"          path="vendor/xiaomi/fuxi"          remote="muppets-23.2" /> -->
-    <!-- <project name="proprietary_vendor_xiaomi_sm8550-common" path="vendor/xiaomi/sm8550-common" remote="muppets-23.2" /> -->
+    <!-- <project name="proprietary_vendor_xiaomi_fuxi"          path="vendor/xiaomi/fuxi"          remote="muppets" revision="lineage-24.0"/> -->
+    <!-- <project name="proprietary_vendor_xiaomi_sm8550-common" path="vendor/xiaomi/sm8550-common" remote="muppets" revision="lineage-24.0"/> -->
     <!-- <project name="vendor_xiaomi_camera"                    path="vendor/xiaomi/camera"        remote="codeberg" /> -->
 
     <!--Kernel Trees-->
     <project name="android_kernel_xiaomi_sm8550"             path="kernel/xiaomi/sm8550"             remote="ldldl" />
-    <project name="android_kernel_xiaomi_sm8550-modules"     path="kernel/xiaomi/sm8550-modules"     remote="los-23.2" />
-    <project name="android_kernel_xiaomi_sm8550-devicetrees" path="kernel/xiaomi/sm8550-devicetrees" remote="los-23.2" />
+    <project name="android_kernel_xiaomi_sm8550-modules"     path="kernel/xiaomi/sm8550-modules"     remote="los" revision="lineage-24.0"/>
+    <project name="android_kernel_xiaomi_sm8550-devicetrees" path="kernel/xiaomi/sm8550-devicetrees" remote="los" revision="lineage-24.0"/>
     <project name="SukiSU-Ultra"                             path="kernel/xiaomi/sm8550/KernelSU"    remote="tyty" />
 </manifest>
