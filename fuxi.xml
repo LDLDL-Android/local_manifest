@@ -9,8 +9,8 @@
     <project name="android_hardware_xiaomi"             path="hardware/xiaomi"             remote="los" revision="lineage-24.0"/>
 
     <!--Vendor Trees-->
-    <!-- <project name="proprietary_vendor_xiaomi_fuxi"          path="vendor/xiaomi/fuxi"          remote="muppets" revision="lineage-24.0"/> -->
-    <!-- <project name="proprietary_vendor_xiaomi_sm8550-common" path="vendor/xiaomi/sm8550-common" remote="muppets" revision="lineage-24.0"/> -->
+    <project name="proprietary_vendor_xiaomi_fuxi"          path="vendor/xiaomi/fuxi"          remote="ldldl" />
+    <project name="proprietary_vendor_xiaomi_sm8550-common" path="vendor/xiaomi/sm8550-common" remote="ldldl" />
     <!-- <project name="vendor_xiaomi_camera"                    path="vendor/xiaomi/camera"        remote="codeberg" /> -->
 
     <!--Kernel Trees-->
