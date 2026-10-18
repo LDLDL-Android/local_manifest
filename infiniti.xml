@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+    <!-- OnePlus 15 (infiniti) - LineageOS 24.0 bring-up -->
+    <!-- Remotes "los" and "muppets" are defined in remotes.xml -->
+
+    <!--Platform Overrides (Oryon CPU variant support)-->
+    <extend-project name="art"         remote="ldldl"/>
+    <extend-project name="build_soong" remote="ldldl"/>
+
+    <!--Platform Overrides (OnePlus stock apps, ported from OP15InfinityX)-->
+    <extend-project name="frameworks_av"                   remote="ldldl"/>
+    <extend-project name="frameworks_base"                 remote="ldldl"/>
+    <extend-project name="frameworks_native"               remote="ldldl"/>
+    <extend-project name="packages_apps_Settings"          remote="ldldl"/>
+    <extend-project name="packages_providers_MediaProvider" remote="ldldl"/>
+
+    <!--Device Trees-->
+    <project name="android_device_oneplus_infiniti"      path="device/oneplus/infiniti"      remote="ldldl"/>
+    <project name="android_device_oneplus_sm8850-common" path="device/oneplus/sm8850-common" remote="ldldl"/>
+    <project name="android_hardware_oplus"               path="hardware/oplus"               remote="ldldl"/>
+
+    <!--QCOM SEPolicy (OPlus camera DSP/offline camera exemptions)-->
+    <remove-project path="device/qcom/sepolicy_vndr/sm8850" />
+    <project name="android_device_qcom_sepolicy_vndr" path="device/qcom/sepolicy_vndr/sm8850" remote="ldldl" groups="kaanapali-vendor,qcom"/>
+
+    <!--OnePlus Camera & stock apps (blobs: vendor/oneplus/infiniti-camera, generated locally by extract-files.py)-->
+    <project name="android_device_oneplus_infiniti-camera" path="device/oneplus/infiniti-camera" remote="ldldl"/>
+
+    <!--Vendor Trees-->
+    <project name="proprietary_vendor_oneplus_infiniti"      path="vendor/oneplus/infiniti"      remote="muppets" revision="lineage-24.0"/>
+    <project name="proprietary_vendor_oneplus_sm8850-common" path="vendor/oneplus/sm8850-common" remote="ldldl"/>
+
+    <!--Kernel Trees-->
+    <!-- GKI 6.12 Kleaf platform (kernel/platform/kernel-6.12), equivalent to roomservice's "type": "kernel" dependency -->
+    <include name="manifests/snippets/kernel-6.12.xml" />
+    <remove-project name="kernel/common" path="kernel/platform/kernel-6.12/common" />
+    <project name="android_kernel_common"
+             path="kernel/platform/kernel-6.12/common"
+             remote="ldldl"
+             revision="android16-6.12-infiniti"
+             upstream="android16-6.12-infiniti"
+             dest-branch="android16-6.12-infiniti"
+             groups="kernel-platform,kernel-platform-612" />
+    <project name="android_kernel_oneplus_sm8850"             path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"             remote="los" revision="lineage-24.0"/>
+    <project name="android_kernel_oneplus_sm8850-devicetrees" path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees" remote="los" revision="lineage-24.0"/>
+    <project name="android_kernel_oneplus_sm8850-modules"     path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"     remote="los" revision="lineage-24.0"/>
+    <project name="BakaSU"                                    path="kernel/platform/kernel-6.12/KernelSU"                          remote="ldldl" />
+</manifest>
