@@ -27,7 +27,7 @@
     <project name="android_device_oneplus_infiniti-camera" path="device/oneplus/infiniti-camera" remote="ldldl"/>
 
     <!--Vendor Trees-->
-    <project name="proprietary_vendor_oneplus_infiniti"      path="vendor/oneplus/infiniti"      remote="muppets" revision="lineage-24.0"/>
+    <project name="proprietary_vendor_oneplus_infiniti"      path="vendor/oneplus/infiniti"      remote="ldldl"/>
     <project name="proprietary_vendor_oneplus_sm8850-common" path="vendor/oneplus/sm8850-common" remote="ldldl"/>
 
     <!--Kernel Trees-->
