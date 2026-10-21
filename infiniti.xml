@@ -4,15 +4,15 @@
     <!-- Remotes "los" and "muppets" are defined in remotes.xml -->
 
     <!--Platform Overrides (Oryon CPU variant support)-->
-    <extend-project name="art"         remote="ldldl"/>
-    <extend-project name="build_soong" remote="ldldl"/>
+    <extend-project name="art"         remote="ldldl" revision="custom"/>
+    <extend-project name="build_soong" remote="ldldl" revision="custom"/>
 
     <!--Platform Overrides (OnePlus stock apps, ported from OP15InfinityX)-->
-    <extend-project name="frameworks_av"                   remote="ldldl"/>
-    <extend-project name="frameworks_base"                 remote="ldldl"/>
-    <extend-project name="frameworks_native"               remote="ldldl"/>
-    <extend-project name="packages_apps_Settings"          remote="ldldl"/>
-    <extend-project name="packages_providers_MediaProvider" remote="ldldl"/>
+    <extend-project name="frameworks_av"                   remote="ldldl" revision="custom"/>
+    <extend-project name="frameworks_base"                 remote="ldldl" revision="custom"/>
+    <extend-project name="frameworks_native"               remote="ldldl" revision="custom"/>
+    <extend-project name="packages_apps_Settings"          remote="ldldl" revision="custom"/>
+    <extend-project name="packages_providers_MediaProvider" remote="ldldl" revision="custom"/>
 
     <!--Device Trees-->
     <project name="android_device_oneplus_infiniti"      path="device/oneplus/infiniti"      remote="ldldl"/>
