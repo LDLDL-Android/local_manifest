@@ -43,6 +43,6 @@
              groups="kernel-platform,kernel-platform-612" />
     <project name="android_kernel_oneplus_sm8850"             path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850"             remote="los" revision="lineage-24.0"/>
     <project name="android_kernel_oneplus_sm8850-devicetrees" path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-devicetrees" remote="ldldl"/>
-    <project name="android_kernel_oneplus_sm8850-modules"     path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"     remote="los" revision="lineage-24.0"/>
+    <project name="android_kernel_oneplus_sm8850-modules"     path="kernel/platform/kernel-6.12/vendor/oneplus/sm8850-modules"     remote="ldldl"/>
     <project name="BakaSU"                                    path="kernel/platform/kernel-6.12/KernelSU"                          remote="ldldl" />
 </manifest>
